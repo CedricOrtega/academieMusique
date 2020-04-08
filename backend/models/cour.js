@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const etudiantSchema = mongoose.Schema({
+const courSchema = mongoose.Schema({
   dateDebut: { type: String, required: true },
   dateFin: { type: String, required: true },
   profId: { type: String, required: true },

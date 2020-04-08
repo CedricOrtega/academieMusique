@@ -10,7 +10,7 @@ exports.createEtudiant = (req, res, next) => {
   etudiant.save().then(
     () => {
       res.status(201).json({
-        message: 'Post saved successfully!'
+        message: 'Etudiant saved successfully!'
       });
     }
   ).catch(

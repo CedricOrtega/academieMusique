@@ -24,10 +24,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(bodyParser.json());
 app.use('/api/auth', userRoutes);
 app.use('/api/etudiant', etudiantRoutes);
 app.use('/api/prof', profRoutes);
 app.use('/api/cour', courRoutes);
-app.use(bodyParser.json());
+
 
 module.exports = app;
