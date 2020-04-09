@@ -4,8 +4,11 @@ exports.createEtudiant = (req, res, next) => {
   const etudiant = new Etudiant({
     nom: req.body.nom,
     prenom: req.body.prenom,
-    profId: req.body.profId,
-    courId: req.body.courId
+    emailTuteur: req.body.emailTuteur,
+    dateNaissance: req.body.dateNaissance,
+    courInstrument: req.body.courInstrument,
+    numeroTelephone: req.body.numeroTelephone,
+    profId: req.body.profId
   });
   etudiant.save().then(
     () => {
@@ -43,8 +46,11 @@ exports.getOneEtudiant = (req, res, next) => {
       _id: req.params.id,
       nom: req.body.nom,
       prenom: req.body.prenom,
-      profId: req.body.profId,
-      courId: req.body.courId
+      emailTuteur: req.body.emailTuteur,
+      dateNaissance: req.body.dateNaissance,
+      instrument: req.body.instrument,
+      numeroTelephone: req.body.numeroTelephone,
+      profId: req.body.profId
     });
     Etudiant.updateOne({_id: req.params.id}, etudiant).then(
       () => {

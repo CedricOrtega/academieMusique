@@ -4,6 +4,9 @@ exports.createProf = (req, res, next) => {
   const prof = new Prof({
     nom: req.body.nom,
     prenom: req.body.prenom,
+    instrumentEnseigne: req.body.instrumentEnseigne,
+    mail: req.body.mail,
+    numeroTel: req.body.numeroTel
   });
   prof.save().then(
     () => {
@@ -40,7 +43,10 @@ exports.getOneProf = (req, res, next) => {
     const prof = new Prof({
       _id: req.params.id,
       nom: req.body.nom,
-      prenom: req.body.prenom
+      prenom: req.body.prenom,
+      instrumentEnseigne: req.body.instrumentEnseigne,
+      mail: req.body.mail,
+      numeroTel: req.body.numeroTel
     });
     Prof.updateOne({_id: req.params.id}, prof).then(
       () => {
