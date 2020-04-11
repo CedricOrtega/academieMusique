@@ -23,8 +23,9 @@
       </button>
       <span>Académie de Musique</span>
       <span class="spacer"></span>
-      <a routerLink="auth/signup">Créer un compte</a>
-      <a routerLink="auth/login">Connexion</a>
+      <a *ngIf="isAuth" style="cursor:pointer" (click)="onLogout()" >Déconnexion</a>
+      <a *ngIf="!isAuth" routerLink="auth/signup">Créer un compte</a>
+      <a *ngIf="!isAuth" routerLink="auth/login">Connexion</a>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
