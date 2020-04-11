@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { HeaderComponent } from './header/header.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
@@ -29,7 +29,6 @@ const appRoutes: Routes = [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    HeaderComponent,
     MainNavComponent
   ],
   imports: [
@@ -40,6 +39,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     LayoutModule,
     BrowserAnimationsModule,
+    MatProgressSpinnerModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
