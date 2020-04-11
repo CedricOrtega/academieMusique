@@ -5,9 +5,10 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">Eleves</a>
+      <a mat-list-item href="#">Professeurs</a>
+      <a mat-list-item href="#">Salles</a>
+      <a mat-list-item href="#">Planning</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,7 +21,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>academieMusique</span>
+      <span>Académie de Musique</span>
+      <span class="spacer"></span>
+      <a routerLink="auth/signup">Créer un compte</a>
+      <a routerLink="auth/login">Connexion</a>
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>
