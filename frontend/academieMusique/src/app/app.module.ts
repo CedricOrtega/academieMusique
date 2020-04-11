@@ -21,8 +21,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   {path: 'auth/signup', component: SignupComponent},
-  {path: 'auth/login', component: LoginComponent}
-]
+  {path: 'auth/login', component: LoginComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
+  { path: '**', redirectTo: 'auth/login'}
+];
 
 @NgModule({
   declarations: [
