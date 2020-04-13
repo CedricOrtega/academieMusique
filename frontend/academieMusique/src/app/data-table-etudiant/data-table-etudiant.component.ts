@@ -57,6 +57,10 @@ export class DataTableEtudiantComponent implements AfterViewInit, OnInit {
     this.router.navigate(['/etudiants','new']);
   }
 
+  onModifyEtudiant(id: string) {
+    this.router.navigate(['/etudiants/modify/' + id]);
+  }
+
   onDeleteEtudiant(etudiant: Etudiant) {
     this.loading = true;
     this.etudiantsService.deleteEtudiant(etudiant._id).then(

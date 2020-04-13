@@ -7,4 +7,5 @@ export class Etudiant {
     courInstrument: string;
     numeroTelephone: string;
     profId: string;
+    userId: string;
   }

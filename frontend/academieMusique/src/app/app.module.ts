@@ -18,19 +18,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { EtudiantListComponent } from './etudiant-list/etudiant-list.component';
-import { EtudiantFormComponent } from './etudiant-list/etudiant-form/etudiant-form.component';
 import { EtudiantsService } from './services/etudiants.service';
 import { DataTableEtudiantComponent } from './data-table-etudiant/data-table-etudiant.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { SingleEtudiantComponent } from './data-table-etudiant/single-etudiant/single-etudiant.component';
+import { EtudiantFormComponent } from './data-table-etudiant/etudiant-form/etudiant-form.component';
+import { ModifyEtudiantComponent } from './data-table-etudiant/modify-etudiant/modify-etudiant.component';
 
 const appRoutes: Routes = [
   {path: 'auth/signup', component: SignupComponent},
   {path: 'auth/login', component: LoginComponent},
   {path: 'etudiants', component: DataTableEtudiantComponent},
   {path: 'etudiants/new', component: EtudiantFormComponent},
+  { path: 'etudiants/modify/:id', component: ModifyEtudiantComponent },
   { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
   { path: '**', redirectTo: 'auth/login'}
 ];
@@ -41,9 +43,10 @@ const appRoutes: Routes = [
     SignupComponent,
     LoginComponent,
     MainNavComponent,
-    EtudiantListComponent,
     EtudiantFormComponent,
-    DataTableEtudiantComponent
+    DataTableEtudiantComponent,
+    SingleEtudiantComponent,
+    ModifyEtudiantComponent
   ],
   imports: [
     BrowserModule,
