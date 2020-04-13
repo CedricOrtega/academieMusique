@@ -48,6 +48,8 @@ export class DataTableEtudiantDataSource extends DataSource<DataTableEtudiantIte
       this.sort.sortChange
     ];
 
+    this.paginator.length = this.data.length;
+
     return merge(...dataMutations).pipe(map(() => {
       return this.getPagedData(this.getSortedData([...this.data]));
     }));
