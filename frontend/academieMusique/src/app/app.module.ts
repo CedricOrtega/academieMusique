@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -18,10 +18,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { EtudiantListComponent } from './etudiant-list/etudiant-list.component';
+import { EtudiantFormComponent } from './etudiant-list/etudiant-form/etudiant-form.component';
+import { EtudiantsService } from './services/etudiants.service';
+import { DataTableEtudiantComponent } from './data-table-etudiant/data-table-etudiant.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 const appRoutes: Routes = [
   {path: 'auth/signup', component: SignupComponent},
   {path: 'auth/login', component: LoginComponent},
+  {path: 'etudiants', component: DataTableEtudiantComponent},
+  {path: 'etudiants/new', component: EtudiantFormComponent},
   { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
   { path: '**', redirectTo: 'auth/login'}
 ];
@@ -31,7 +40,10 @@ const appRoutes: Routes = [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    MainNavComponent
+    MainNavComponent,
+    EtudiantListComponent,
+    EtudiantFormComponent,
+    DataTableEtudiantComponent
   ],
   imports: [
     BrowserModule,
@@ -46,12 +58,17 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    EtudiantsService
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

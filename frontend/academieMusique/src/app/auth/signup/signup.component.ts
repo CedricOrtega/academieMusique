@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
     this.auth.createNewUser(email, password).then(
       () => {
         this.loading = false;
-          this.router.navigate(['/']);
+          this.router.navigate(['/etudiants']);
       }
     ).catch(
       (error) => {
