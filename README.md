@@ -12,7 +12,8 @@ Comment demarrer le projet ?
 - L'architecture comporte le back en node.js interrogeant la base mongodb et le front en angular qui va interroger notre api node.js
 
 - En premier accéder au dossier backend
-- Executer en ligne de commande : nodemon server
+- Executer en ligne de commande : npm install
+- ensuite, Executer en ligne de commande : nodemon server
 Pour lancer le serve node.js
 La base de donnée mongodb est en cloud pas besoin d'importer les données, tout le monde peut l'interroger. Le lien se fait via mongoose entre la base et le serveur node.js .
 
