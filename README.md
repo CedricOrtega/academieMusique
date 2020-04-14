@@ -13,6 +13,7 @@ Comment demarrer le projet ?
 
 - En premier accéder au dossier backend
 - Executer en ligne de commande : npm install
+- Executer en ligne de commande :  npm install -g nodemon
 - ensuite, Executer en ligne de commande : nodemon server
 
 Pour lancer le serve node.js
