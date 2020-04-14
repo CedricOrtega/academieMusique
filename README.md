@@ -14,6 +14,7 @@ Comment demarrer le projet ?
 - En premier accéder au dossier backend
 - Executer en ligne de commande : npm install
 - ensuite, Executer en ligne de commande : nodemon server
+
 Pour lancer le serve node.js
 La base de donnée mongodb est en cloud pas besoin d'importer les données, tout le monde peut l'interroger. Le lien se fait via mongoose entre la base et le serveur node.js .
 
