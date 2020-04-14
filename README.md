@@ -22,6 +22,7 @@ La base de donnée mongodb est en cloud pas besoin d'importer les données, tout
 Une fois le serveur lancé.
 
 Avec un second terminal accéder au dossier frontend/academieMusique
+- Executer en ligne de commande : npm install
 -  Executer en ligne de commande :  ng serve --open
 
 Le navigateur va ouvrir le bon lien.
