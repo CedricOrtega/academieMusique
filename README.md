@@ -1,6 +1,7 @@
 # academieMusique
-Développement d'un gestionnaire d'une académie de musique
+
 Contexte : 
+
 L’académie de Musique de Nice compte entre 800 et 1000 élèves, de tous les âges allant de 1 à 99 ans. Elle est reconnue depuis plus de 30 ans comme la première école de musique privée du département pour la qualité de son enseignement, son dynamisme, ses prix attractifs et son esprit convivial.  Chaque année, il y a de nouveaux inscrits, des élèves qui se réinscrivent pour l’année suivante et d’autres qui ne poursuivent pas. Actuellement la gestion de ces mouvements sont enregistrés dans un fichier Excel. La gestion des cours, du planning, des professeurs et des salles, quant à lui, ce fait par papier.  De ce fait la consultation et modification de ces fichiers est compliquée pour la Direction. Le but de ce projet est de fournir une application web complète pour gérer aussi bien les élèves que les professeurs, le planning ou les salles de cours.
 C'est un projet réel pour un client réel.
 Nous vous invitons à visiter leur site  https://academie-musique-nice.com/
